@@ -70,5 +70,3 @@ class Admin_Themes {
 }
 
 new Admin_Themes();
-
-?>
