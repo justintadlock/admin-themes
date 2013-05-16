@@ -5,6 +5,15 @@
  */
 
 class Admin_Themes {
+	
+	private static $instance;
+	
+	public static function get_instance() {
+		if ( !isset( self::$instance ) ) {
+			self::$instance = new self;
+		}
+		return self::$instance;
+	}
 
 	public $themes = array();
 
@@ -69,6 +78,4 @@ class Admin_Themes {
 	}
 }
 
-new Admin_Themes();
-
-?>
+Admin_Themes::get_instance();
